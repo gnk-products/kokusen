@@ -11,17 +11,14 @@ For example, Czech Republic vs. Slovakia, or Latvia vs. Lithuania.
 - Around 30 country combinations available  
 
 ## Screenshots
-#### Stock charts
-![simplewallscreenshot01](https://github.com/user-attachments/assets/b6910942-3455-4b97-82f9-b9ead2d2667e)
+#### Select the match
+![kokusenscreenshot01](https://github.com/user-attachments/assets/6f78ab2b-621c-47ea-a9f5-724fe242371e)
 
-#### Ticker trades
-![simplewallscreenshot03](https://github.com/user-attachments/assets/49a86218-4525-4728-9a68-6ed44ff4df7b)
+#### Select the country
+![kokusenscreenshot02](https://github.com/user-attachments/assets/1ed74f3b-9788-4ed9-b066-ccd68ea9de45)
 
-#### Tickers news
-![simplewallscreenshot02](https://github.com/user-attachments/assets/2555b82d-747f-47a7-bd73-041b3aa10b63)
-
-### Tickers meta information
-![simplewallscreenshot04](https://github.com/user-attachments/assets/3a7bc03f-5ede-4cd7-9579-de1dd41f5994)
+#### The answer
+![kokusenscreenshot03](https://github.com/user-attachments/assets/7fc8412a-63ae-4ecd-9b92-1ff7597f2f96)
 
 
 ## 🚀 Quick Start
