@@ -35,7 +35,7 @@ Then you have to update the `NEXT_PUBLIC_GOOGLE_ACCESS_KEY` in docker-compose.ya
 
 ### Run the service
 ```bash
-docker compose up kokusen-service
+docker-compose up kokusen-service
 ```
 
 ### Set up the database (Prisma)
