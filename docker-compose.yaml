@@ -1,0 +1,57 @@
+services:
+  kokusen-mysql:
+    build:
+      dockerfile: dockerfiles/mysql.dev
+      args:
+        - KOKUSEN_DATABASE=kokusen-db
+        - MYSQL_USER=kokusen-user
+    container_name: kokusen-mysql
+    restart: always
+    volumes:
+      - data_kokusen-mysql:/var/lib/mysql
+    ports:
+      - 3602:3306
+    environment:
+      - TZ=Asia/Tokyo
+      - MYSQL_ROOT_PASSWORD=root_password
+      - MYSQL_DATABASE=kokusen-db
+      - MYSQL_USER=kokusen-user
+      - MYSQL_PASSWORD=kokusenpass
+    networks:
+      - kokusen-network
+    healthcheck:
+      test: ['CMD', 'mysqladmin', 'ping', '-h', 'localhost', '-proot_password']
+      # 起動するまでの30sは1s間隔で確認する
+      start_period: 30s
+      start_interval: 1s
+      # 起動後は30s間隔で最大5回リトライする
+      interval: 30s
+      timeout: 1s
+      retries: 5
+
+  kokusen-service:
+    build:
+      dockerfile: ../dockerfiles/node-app.dev
+      context: ./kokusen
+    container_name: kokusen
+    restart: always
+    ports:
+      - '3062:3062'
+    environment:
+      - SERVICE_PORT=3062
+      - NODE_ENV=development
+      - DATABASE_URL=mysql://kokusen-user:kokusenpass@kokusen-mysql:3306/kokusen-db
+      - NEXT_PUBLIC_GOOGLE_ACCESS_KEY=googlemapaccesskey
+    volumes:
+      - ./kokusen:/app
+      - /app/node_modules
+    depends_on:
+      kokusen-mysql:
+        condition: service_healthy
+    networks:
+      - kokusen-network
+
+networks:
+  kokusen-network:
+volumes:
+  data_kokusen-mysql:

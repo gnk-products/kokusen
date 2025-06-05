@@ -1,0 +1,12 @@
+FROM node:20.18-alpine
+
+WORKDIR /app
+
+# Install yarn
+RUN apk update && apk add yarn
+
+COPY . .
+
+RUN yarn install
+
+CMD yarn dev -p $SERVICE_PORT

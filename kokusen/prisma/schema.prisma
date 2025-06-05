@@ -1,0 +1,112 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model Country {
+  id               Int            @id @default(autoincrement())
+  code             String         @db.VarChar(10)
+  name             String         @db.VarChar(100)
+  name_ja          String         @db.VarChar(100)
+  bbox             String         @db.VarChar(100)
+  reg_image        String?        @db.Text
+  sm_image         String?        @db.Text
+  created_at       DateTime       @default(now())
+  deleted_at       DateTime?
+  mapImages        MapImage[]
+  matchCountries   MatchCountry[]
+  matchUserAnswers MatchAnswer[]  @relation("matchUserAnswers")
+  matchAnswers     MatchAnswer[]  @relation("matchAnswers")
+
+  @@unique([code])
+  @@index([created_at])
+  @@index([deleted_at])
+}
+
+model MapImage {
+  id            Int         @id @default(autoincrement())
+  country       Country     @relation(fields: [country_id], references: [id])
+  country_id    Int
+  map_image_id  String      @db.VarChar(20)
+  is_pano       Boolean
+  lat           Float
+  long          Float
+  compass_angle Float
+  created_at    DateTime    @default(now())
+  deleted_at    DateTime?
+  matchSeed     MatchSeed[]
+
+  @@unique([map_image_id])
+  @@index([created_at])
+  @@index([deleted_at])
+}
+
+model Match {
+  id             Int            @id @default(autoincrement())
+  slug           String         @db.VarChar(50)
+  order          Int
+  created_at     DateTime       @default(now())
+  deleted_at     DateTime?
+  matchCountries MatchCountry[]
+  matchSeed      MatchSeed[]
+
+  @@unique([slug])
+  @@index([created_at])
+  @@index([deleted_at])
+}
+
+model MatchCountry {
+  id           Int     @id @default(autoincrement())
+  match        Match   @relation(fields: [match_id], references: [id])
+  match_id     Int
+  country      Country @relation(fields: [country_code], references: [code])
+  country_code String
+
+  @@unique([match_id, country_code])
+}
+
+model MatchSeed {
+  id           Int           @id @default(autoincrement())
+  slug         String        @db.VarChar(50)
+  match        Match         @relation(fields: [match_id], references: [id])
+  match_id     Int
+  mapImage     MapImage      @relation(fields: [map_image_id], references: [id])
+  map_image_id Int
+  order        Int
+  created_by   String?       @db.VarChar(50)
+  created_at   DateTime      @default(now())
+  deleted_at   DateTime?
+  matchAnswer  MatchAnswer[]
+
+  @@index(slug)
+  @@index(created_by)
+  @@index(created_at)
+  @@index(deleted_at)
+  @@unique([slug, match_id, map_image_id])
+}
+
+model MatchAnswer {
+  id             Int       @id @default(autoincrement())
+  matchSeed      MatchSeed @relation(fields: [match_seed_id], references: [id])
+  match_seed_id  Int
+  user_id        String    @db.VarChar(50)
+  userAnswer     Country   @relation("matchUserAnswers", fields: [user_answer_id], references: [id])
+  user_answer_id Int
+  answer         Country   @relation("matchAnswers", fields: [answer_id], references: [id])
+  answer_id      Int
+  created_at     DateTime  @default(now())
+
+  @@index(user_id)
+  @@index(created_at)
+  @@unique([match_seed_id, user_id])
+}

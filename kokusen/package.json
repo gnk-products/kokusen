@@ -1,0 +1,58 @@
+{
+  "name": "project-kokusen",
+  "version": "5.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "rm -rf .next/cache && next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "post-update": "echo \"codesandbox preview only, need an update\" && pnpm update --latest"
+  },
+  "prisma": {
+    "seed": "npx tsx prisma/seed.ts"
+  },
+  "dependencies": {
+    "@emotion/cache": "latest",
+    "@emotion/react": "latest",
+    "@emotion/styled": "latest",
+    "@mui/icons-material": "next",
+    "@mui/material": "next",
+    "@mui/material-nextjs": "next",
+    "@mui/x-date-pickers": "^7.28.2",
+    "@prisma/client": "6.4.1",
+    "@react-google-maps/api": "^2.20.6",
+    "@types/leaflet": "^1.9.17",
+    "@types/lodash": "^4.17.15",
+    "@types/react-highlight-words": "^0.20.0",
+    "@types/seedrandom": "^3.0.8",
+    "axios": "^1.8.1",
+    "dayjs": "^1.11.13",
+    "fast-xml-parser": "^5.0.9",
+    "leaflet": "^1.9.4",
+    "lodash": "^4.17.21",
+    "next": "15.1.7",
+    "notistack": "^3.0.2",
+    "react": "^19.0.0-rc.1",
+    "react-call": "^1.7.0",
+    "react-country-flags-lazyload": "^1.0.9",
+    "react-dom": "^19.0.0-rc.1",
+    "react-leaflet": "^5.0.0-rc.2",
+    "seedrandom": "^3.0.5",
+    "ts-node": "^10.9.2",
+    "typescript-eslint": "^8.31.1"
+  },
+  "devDependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^5.2.2",
+    "@types/node": "latest",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "eslint": "latest",
+    "eslint-config-next": "15.0.0",
+    "prettier": "^3.5.3",
+    "prisma": "^6.4.1",
+    "typescript": "^5.8.3"
+  },
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
+}

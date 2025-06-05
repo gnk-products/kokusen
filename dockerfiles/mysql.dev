@@ -1,0 +1,18 @@
+FROM mysql:8
+
+ARG KOKUSEN_DATABASE
+ARG MYSQL_USER
+
+RUN <<EOF
+cat <<- _DOC_ > /docker-entrypoint-initdb.d/init.sql
+CREATE DATABASE IF NOT EXISTS \`${KOKUSEN_DATABASE}\`;
+GRANT ALL ON \`${KOKUSEN_DATABASE}\`.* TO '${MYSQL_USER}'@'%';
+_DOC_
+EOF
+
+ENTRYPOINT [ \
+  "sh", \
+  "/usr/local/bin/docker-entrypoint.sh", \
+  "--character-set-server=utf8mb4", \
+  "--collation-server=utf8mb4_unicode_ci" \
+]

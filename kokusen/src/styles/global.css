@@ -1,0 +1,33 @@
+a {
+  color: unset;
+  text-decoration: none;
+}
+
+.mapillary-bearing-indicator-container {
+  bottom: 120px !important;
+  left: 10px;
+}
+
+.mapillary-bearing-north {
+  border-bottom: 4px solid #e91e63 !important;
+  left: 20;
+}
+
+.leaflet-popup-content-wrapper {
+  text-align: center !important;
+}
+
+.leaflet-popup-content {
+  margin: 4px 12px 4px 10px !important;
+  font-size: 12px !important;
+}
+
+.gm-style .gm-iv-container {
+  display: none;
+}
+
+.gmnoprint.gm-bundled-control.gm-bundled-control-on-bottom {
+  right: 10px;
+  top: 10px;
+  bottom: unset;
+}

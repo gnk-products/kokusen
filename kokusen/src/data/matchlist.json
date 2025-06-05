@@ -1,0 +1,299 @@
+[
+  {
+    "order": 1,
+    "slug": "BO-EC",
+    "codes": [
+      "BO",
+      "EC"
+    ]
+  },
+  {
+    "order": 2,
+    "slug": "CO-EC",
+    "codes": [
+      "CO",
+      "EC"
+    ]
+  },
+  {
+    "order": 3,
+    "slug": "BO-CO",
+    "codes": [
+      "BO",
+      "CO"
+    ]
+  },
+  {
+    "order": 4,
+    "slug": "AR-UY",
+    "codes": [
+      "AR",
+      "UY"
+    ]
+  },
+  {
+    "order": 5,
+    "slug": "CL-PE",
+    "codes": [
+      "CL",
+      "PE"
+    ]
+  },
+  {
+    "order": 6,
+    "slug": "CA-US",
+    "codes": [
+      "CA",
+      "US"
+    ]
+  },
+  {
+    "order": 7,
+    "slug": "BR-MX",
+    "codes": [
+      "BR",
+      "MX"
+    ]
+  },
+  {
+    "order": 8,
+    "slug": "GT-PA",
+    "codes": [
+      "GT",
+      "PA"
+    ]
+  },
+  {
+    "order": 9,
+    "slug": "JP-KR",
+    "codes": [
+      "JP",
+      "KR"
+    ]
+  },
+  {
+    "order": 10,
+    "slug": "JP-TW",
+    "codes": [
+      "JP",
+      "TW"
+    ]
+  },
+  {
+    "order": 11,
+    "slug": "KR-TW",
+    "codes": [
+      "KR",
+      "TW"
+    ]
+  },
+  {
+    "order": 12,
+    "slug": "KH-TH",
+    "codes": [
+      "KH",
+      "TH"
+    ]
+  },
+  {
+    "order": 13,
+    "slug": "KH-LA",
+    "codes": [
+      "KH",
+      "LA"
+    ]
+  },
+  {
+    "order": 14,
+    "slug": "LA-TH",
+    "codes": [
+      "LA",
+      "TH"
+    ]
+  },
+  {
+    "order": 15,
+    "slug": "ID-MY",
+    "codes": [
+      "ID",
+      "MY"
+    ]
+  },
+  {
+    "order": 16,
+    "slug": "AU-NZ",
+    "codes": [
+      "AU",
+      "NZ"
+    ]
+  },
+  {
+    "order": 17,
+    "slug": "RU-UA",
+    "codes": [
+      "RU",
+      "UA"
+    ]
+  },
+  {
+    "order": 18,
+    "slug": "HU-RS",
+    "codes": [
+      "HU",
+      "RS"
+    ]
+  },
+  {
+    "order": 19,
+    "slug": "BG-RO",
+    "codes": [
+      "BG",
+      "RO"
+    ]
+  },
+  {
+    "order": 20,
+    "slug": "CZ-SK",
+    "codes": [
+      "CZ",
+      "SK"
+    ]
+  },
+  {
+    "order": 21,
+    "slug": "ES-FR",
+    "codes": [
+      "ES",
+      "FR"
+    ]
+  },
+  {
+    "order": 22,
+    "slug": "ES-PT",
+    "codes": [
+      "ES",
+      "PT"
+    ]
+  },
+  {
+    "order": 23,
+    "slug": "AT-HU",
+    "codes": [
+      "AT",
+      "HU"
+    ]
+  },
+  {
+    "order": 24,
+    "slug": "LS-SZ",
+    "codes": [
+      "LS",
+      "SZ"
+    ]
+  },
+  {
+    "order": 25,
+    "slug": "LS-ZA",
+    "codes": [
+      "LS",
+      "ZA"
+    ]
+  },
+  {
+    "order": 26,
+    "slug": "SZ-ZA",
+    "codes": [
+      "SZ",
+      "ZA"
+    ]
+  },
+  {
+    "order": 27,
+    "slug": "GB-IE",
+    "codes": [
+      "GB",
+      "IE"
+    ]
+  },
+  {
+    "order": 28,
+    "slug": "NO-SE",
+    "codes": [
+      "NO",
+      "SE"
+    ]
+  },
+  {
+    "order": 29,
+    "slug": "FI-SE",
+    "codes": [
+      "FI",
+      "SE"
+    ]
+  },
+  {
+    "order": 30,
+    "slug": "FI-NO",
+    "codes": [
+      "FI",
+      "NO"
+    ]
+  },
+  {
+    "order": 31,
+    "slug": "EE-LV",
+    "codes": [
+      "EE",
+      "LV"
+    ]
+  },
+  {
+    "order": 32,
+    "slug": "EE-LT",
+    "codes": [
+      "EE",
+      "LT"
+    ]
+  },
+  {
+    "order": 33,
+    "slug": "LT-LV",
+    "codes": [
+      "LT",
+      "LV"
+    ]
+  },
+  {
+    "order": 34,
+    "slug": "EE-LT-LV",
+    "codes": [
+      "EE",
+      "LT",
+      "LV"
+    ]
+  },
+  {
+    "order": 35,
+    "slug": "BG-UA",
+    "codes": [
+      "BG",
+      "UA"
+    ]
+  },
+  {
+    "order": 36,
+    "slug": "AT-SI",
+    "codes": [
+      "AT",
+      "SI"
+    ]
+  },
+  {
+    "order": 37,
+    "slug": "HU-SI",
+    "codes": [
+      "HU",
+      "SI"
+    ]
+  }
+]
